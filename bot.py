@@ -28,6 +28,10 @@ async def event_message(ctx):
     # make sure the bot ignores itself and the streamer
     if ctx.author.name.lower() == os.environ['BOT_NICK'].lower():
         return
+
+    #bot.py, in event_message, below the bot ignore stuffs
+    await bot.handle_commands(ctx)
+    
     # bot.py, in event_message, below the bot-ignoring stuff
     fouMsjRand=int(random.random()*10)
     if fouMsjRand==0 :
@@ -38,9 +42,29 @@ async def event_message(ctx):
         await ctx.channel.send("Fouchetumadre!")
          
 
-@bot.command(name='test')
+@bot.command(name='1')
 async def test(ctx):
-    await ctx.send('test passed!')
+    await ctx.send('Carta #1!')
+
+@bot.command(name='2')
+async def test(ctx):
+    await ctx.send('Carta #2!')
+
+@bot.command(name='3')
+async def test(ctx):
+    await ctx.send('Carta #3!')
+
+@bot.command(name='4')
+async def test(ctx):
+    await ctx.send('Carta #4!')
+
+@bot.command(name='5')
+async def test(ctx):
+    await ctx.send('Carta #5!')
+
+@bot.command(name='attack')
+async def test(ctx):
+    await ctx.send('Ataque!') 
 
     
 if __name__ =="__main__":
