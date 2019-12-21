@@ -1,8 +1,11 @@
 #bot.py
-
+from pynput.keyboard import Key, Controller
+import time
 import random
 import os #for importing env vars to the bot to use
 from twitchio.ext import commands
+
+keyboard = Controller()
 
 bot=commands.Bot(
     #set up the bot
@@ -45,22 +48,37 @@ async def event_message(ctx):
 @bot.command(name='1')
 async def test(ctx):
     await ctx.send('Carta #1!')
+    keyboard.press('1')
+    keyboard.release('1')
+    time.sleep(0.12)
 
 @bot.command(name='2')
 async def test(ctx):
     await ctx.send('Carta #2!')
-
+    keyboard.press('2')
+    keyboard.release('2')
+    time.sleep(0.12)
+    
 @bot.command(name='3')
 async def test(ctx):
     await ctx.send('Carta #3!')
-
+    keyboard.press('3')
+    keyboard.release('3')
+    time.sleep(0.12)
+    
 @bot.command(name='4')
 async def test(ctx):
     await ctx.send('Carta #4!')
+    keyboard.press('4')
+    keyboard.release('4')
+    time.sleep(0.12)
 
 @bot.command(name='5')
 async def test(ctx):
     await ctx.send('Carta #5!')
+    keyboard.press('5')
+    keyboard.release('5')
+    time.sleep(0.12)
 
 @bot.command(name='attack')
 async def test(ctx):
