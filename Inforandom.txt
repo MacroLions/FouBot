@@ -1,4 +1,9 @@
 pipenv run python bot.py
+ctr+d liberar cmd
+
+https://pynput.readthedocs.io/en/latest/keyboard.html#pynput.keyboard.Key
+Keys especiales
+
 
 @bot.event
 async def event_ready():
