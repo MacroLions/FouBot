@@ -42,7 +42,7 @@ async def event_message(ctx):
     elif fouMsjRand==1:
         await ctx.channel.send("Fou fou!")
     else:
-        await ctx.channel.send("Comands are !1,!2,!3,!4,!5,!skip !attack !")
+        await ctx.channel.send("Fou fou kyu!")
          
 
 @bot.command(name='1')
@@ -90,9 +90,13 @@ async def test(ctx):
 async def test(ctx):
     keyboard.press(Key.tab)
     keyboard.release(Key.tab)
-    keyboard.press('4')
-    keyboard.release('4')
     await ctx.send('Skipping!') 
+
+@bot.command(name='close')
+async def test(ctx):
+    keyboard.press('}')
+    keyboard.release('}')
+    await ctx.send('Closing!') 
 
 #Arrastrar
 @bot.command(name='up')
@@ -109,7 +113,7 @@ async def test(ctx):
     
 @bot.command(name='right')
 async def test(ctx):
-    keyboard.press.key(Key.right)
+    keyboard.press(Key.right)
     keyboard.release(Key.right)
     await ctx.send('right!')
     
@@ -117,7 +121,166 @@ async def test(ctx):
 async def test(ctx):
     keyboard.press(Key.left)
     keyboard.release(Key.left)
-    await ctx.send('left!') 
+    await ctx.send('left!')
+
+#NPs
+
+@bot.command(name='np1')
+async def test(ctx):
+    keyboard.press('q')
+    keyboard.release('q')
+    await ctx.send('np1!')
+    
+@bot.command(name='np2')
+async def test(ctx):
+    keyboard.press('w')
+    keyboard.release('w')
+    await ctx.send('np2!')
+    
+@bot.command(name='np3')
+async def test(ctx):
+    keyboard.press('e')
+    keyboard.release('e')
+    await ctx.send('np3!')
+
+
+#Y&N
+@bot.command(name='y')
+async def test(ctx):
+    keyboard.press('y')
+    keyboard.release('y')
+    await ctx.send('yes!')
+    
+@bot.command(name='n')
+async def test(ctx):
+    keyboard.press('n')
+    keyboard.release('n')
+    await ctx.send('no!')
+    
+#skills
+    
+#Servant 1
+@bot.command(name='a1')
+async def test(ctx):
+    keyboard.press('a')
+    keyboard.release('a')
+    await ctx.send('Servant A Skill 1!')
+    
+@bot.command(name='a2')
+async def test(ctx):
+    keyboard.press('s')
+    keyboard.release('s')
+    await ctx.send('Servant A Skill 2!')
+    
+@bot.command(name='a3')
+async def test(ctx):
+    keyboard.press('d')
+    keyboard.release('d')
+    await ctx.send('Servant A Skill 3!')
+
+#Servant 2
+@bot.command(name='b1')
+async def test(ctx):
+    keyboard.press('f')
+    keyboard.release('f')
+    await ctx.send('Servant B Skill 1!')
+    
+@bot.command(name='b2')
+async def test(ctx):
+    keyboard.press('g')
+    keyboard.release('g')
+    await ctx.send('Servant B Skill 2!')
+    
+@bot.command(name='b3')
+async def test(ctx):
+    keyboard.press('h')
+    keyboard.release('h')
+    await ctx.send('Servant B Skill 3!')
+
+#Servant 3
+@bot.command(name='c1')
+async def test(ctx):
+    keyboard.press('j')
+    keyboard.release('j')
+    await ctx.send('Servant C Skill 1!')
+    
+@bot.command(name='c2')
+async def test(ctx):
+    keyboard.press('k')
+    keyboard.release('k')
+    await ctx.send('Servant C Skill 2!')
+    
+@bot.command(name='c3')
+async def test(ctx):
+    keyboard.press('l')
+    keyboard.release('l')
+    await ctx.send('Servant C Skill 3!')
+
+#Master
+@bot.command(name='m')
+async def test(ctx):
+    keyboard.press('m')
+    keyboard.release('m')
+    await ctx.send('Master skill menu open!')
+        
+@bot.command(name='m1')
+async def test(ctx):
+    keyboard.press('i')
+    keyboard.release('i')
+    await ctx.send('Master Skill 1!')
+    
+@bot.command(name='m2')
+async def test(ctx):
+    keyboard.press('o')
+    keyboard.release('o')
+    await ctx.send('Master Skill 2!')
+    
+@bot.command(name='m3')
+async def test(ctx):
+    keyboard.press('p')
+    keyboard.release('p')
+    await ctx.send('Master Skill 3!')
+
+#Menu Principal
+@bot.command(name='a')
+async def test(ctx):
+    keyboard.press(Key.f1)
+    keyboard.release(Key.f1)
+    await ctx.send('Menu Option 1!')
+    
+@bot.command(name='b')
+async def test(ctx):
+    keyboard.press(Key.f2)
+    keyboard.release(Key.f2)
+    await ctx.send('Menu Option 2!')
+    
+@bot.command(name='c')
+async def test(ctx):
+    keyboard.press(Key.f3)
+    keyboard.release(Key.f3)
+    await ctx.send('Menu Option 3!')
+    
+@bot.command(name='d')
+async def test(ctx):
+    keyboard.press(Key.f4)
+    keyboard.release(Key.f4)
+    await ctx.send('Menu Option 4!')
+    
+@bot.command(name='e') 
+async def test(ctx):
+    keyboard.press(Key.f5)
+    keyboard.release(Key.f5)
+    await ctx.send('Menu Option 5!')
+    
+@bot.command(name='f') 
+async def test(ctx):
+    keyboard.press(Key.f6)
+    keyboard.release(Key.f6)
+    await ctx.send('Menu Option 6!')
+
+@bot.command(name='id') 
+async def test(ctx):
+    await ctx.send('132,384,577!')
     
 if __name__ =="__main__":
     bot.run()
