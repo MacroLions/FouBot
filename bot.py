@@ -4,6 +4,8 @@ import time
 import random
 import os #for importing env vars to the bot to use
 from twitchio.ext import commands
+import time
+
 
 keyboard = Controller()
 
@@ -36,13 +38,14 @@ async def event_message(ctx):
     await bot.handle_commands(ctx)
     
     # bot.py, in event_message, below the bot-ignoring stuff
-    fouMsjRand=int(random.random()*10)
-    if fouMsjRand==0 :
-        await ctx.channel.send("FOU")
-    elif fouMsjRand==1:
-        await ctx.channel.send("Fou fou!")
-    else:
-        await ctx.channel.send("Fou fou kyu!")
+#fou fou kyu
+#    fouMsjRand=int(random.random()*10)
+#    if fouMsjRand==0 :
+#        await ctx.channel.send("FOU")
+#    elif fouMsjRand==1:
+#        await ctx.channel.send("Fou fou!")
+#    else:
+#        await ctx.channel.send("Fou fou kyu!")
          
 
 @bot.command(name='1')
@@ -98,28 +101,44 @@ async def test(ctx):
     keyboard.release('}')
     await ctx.send('Closing!') 
 
+@bot.command(name='cs')
+async def test(ctx):
+    keyboard.press('¿')
+    keyboard.release('¿')
+    await ctx.send('Command Spells!')
+
+@bot.command(name='bm')
+async def test(ctx):
+    keyboard.press('0')
+    keyboard.release('0')
+    await ctx.send('Battle menu!') 
+
 #Arrastrar
 @bot.command(name='up')
 async def test(ctx):
     keyboard.press(Key.up)
+    time.sleep(0.6)
     keyboard.release(Key.up)
     await ctx.send('up!')
     
 @bot.command(name='down')
 async def test(ctx):
     keyboard.press(Key.down)
+    time.sleep(0.6)
     keyboard.release(Key.down)
     await ctx.send('down!')
     
 @bot.command(name='right')
 async def test(ctx):
     keyboard.press(Key.right)
+    time.sleep(0.6)
     keyboard.release(Key.right)
     await ctx.send('right!')
     
 @bot.command(name='left')
 async def test(ctx):
     keyboard.press(Key.left)
+    time.sleep(0.6)
     keyboard.release(Key.left)
     await ctx.send('left!')
 
@@ -150,11 +169,12 @@ async def test(ctx):
     keyboard.press('y')
     keyboard.release('y')
     await ctx.send('yes!')
-    
+
+#n is f por posición    
 @bot.command(name='n')
 async def test(ctx):
-    keyboard.press('n')
-    keyboard.release('n')
+    keyboard.press('f')
+    keyboard.release('f')
     await ctx.send('no!')
     
 #skills
@@ -281,6 +301,85 @@ async def test(ctx):
 @bot.command(name='id') 
 async def test(ctx):
     await ctx.send('132,384,577!')
+
+@bot.command(name='sq') 
+async def test(ctx):
+    keyboard.press('e')
+    keyboard.release('e')
+    await ctx.send('Saint Quartz!')
+
+#zoom
+@bot.command(name='zoom') 
+async def test(ctx):
+    keyboard.press('+')
+    time.sleep(0.2)
+    keyboard.release('+')
+    await ctx.send('Zoom!')
+
+@bot.command(name='reduce') 
+async def test(ctx):
+    keyboard.press('-')
+    time.sleep(0.2)
+    keyboard.release('-')
+    await ctx.send('reduce!')
+
+
+#class supp
+@bot.command(name='all') 
+async def test(ctx):
+    keyboard.press('z')
+    keyboard.release('z')
+    await ctx.send('all!')
+
+@bot.command(name='saber') 
+async def test(ctx):
+    keyboard.press('x')
+    keyboard.release('x')
+    await ctx.send('saber!')
+
+@bot.command(name='archer') 
+async def test(ctx):
+    keyboard.press('c')
+    keyboard.release('c')
+    await ctx.send('archer!')
+
+@bot.command(name='lancer') 
+async def test(ctx):
+    keyboard.press('v')
+    keyboard.release('v')
+    await ctx.send('lancer!')
+
+
+@bot.command(name='rider') 
+async def test(ctx):
+    keyboard.press('b')
+    keyboard.release('b')
+    await ctx.send('rider!')
+
+@bot.command(name='caster') 
+async def test(ctx):
+    keyboard.press('n')
+    keyboard.release('n')
+    await ctx.send('caster!')
+
+@bot.command(name='assassin') 
+async def test(ctx):
+    keyboard.press(',')
+    keyboard.release(',')
+    await ctx.send('assassin!')
+    
+@bot.command(name='berserker') 
+async def test(ctx):
+    keyboard.press('.')
+    keyboard.release('.')
+    await ctx.send('berserker!')
+
+@bot.command(name='extra') 
+async def test(ctx):
+    keyboard.press('{')
+    keyboard.release('{')
+    await ctx.send('extra')
+
     
 if __name__ =="__main__":
     bot.run()
